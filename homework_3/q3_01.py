@@ -1,9 +1,13 @@
 num_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 def format_numbers(numbers : list[list[int]]):
-    """ 利用列表推導式將每項整數轉換為字串，
+    """
+    利用列表推導式將每項整數轉換為字串，
+
     並用格式化的方式將字串填充為置右的8個字元，
-    呈現的將會是包含3個子列表的二維列表 """
+
+    呈現的將會是包含3個子列表的二維列表
+    """
     return [ # 二維列表
         ['{:>8}'.format(str(x)) for x in get_even_squares(numbers)], # 一維列表
         ['{:>8}'.format(str(y)) for y in get_odd_cubes(numbers)], # 一維列表
